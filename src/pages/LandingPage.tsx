@@ -1,8 +1,15 @@
 import Navbar from "../component/Navbar";
 import landingPageBackground from "../assets/landingPageBackground.svg";
 import MoodiFYLogo from "../assets/MoodiFY_Logo.svg"
+import { useNavigate } from "react-router";
 
 function LandingPage() {
+    const navigate = useNavigate();
+
+    const startedNavigation = () => {
+        navigate("/selection")
+    }
+
     return(
         <>
             <Navbar currentPage={"Landing"}/>
@@ -12,7 +19,7 @@ function LandingPage() {
                         <img src={MoodiFYLogo} className="size-[104px] z-10 mb-8" alt="" />
                         <p className="text-[84px] text-Semi_bright_red z-10 font-bold">Welcome to MoodiFY</p>    
                         <p className="text-[36px] text-Very_bright_red z-10 font-bold">Music That Matches your Mood</p>
-                        <button className="text-[36px] text-Bright_red font-bold z-20 bg-Dark_red px-18 py-6 mt-12 border border-Red border-3 rounded-[24px]">
+                        <button onClick={startedNavigation} className="cursor-pointer text-[36px] text-Bright_red font-bold z-20 bg-Dark_red px-18 py-6 mt-12 border border-Red border-3 rounded-[24px]">
                             Get Started
                         </button>
                     </div>
