@@ -1,6 +1,5 @@
-import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router'
-import LandingPage from './pages/landingPage';
+import LandingPage from './pages/LandingPage';
 import AboutUsPage from './pages/AboutUsPage';
 
 function App() {

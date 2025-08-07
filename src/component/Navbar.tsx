@@ -1,9 +1,13 @@
 import { useNavigate } from "react-router";
 import type { NavbarType } from "../types/NavbarType";
+import profilePlaceholder from "../assets/profile_placeholder.svg"
+import profilePlaceholder2 from "../assets/profile_placeholder2.svg"
+import { useState } from "react";
 
 const Navbar = (props: NavbarType) => {
     const navigate = useNavigate();
 
+    const [isDropdownOpen, setDropdownOpen] = useState(false);
     const hideAll = ["Landing", "Login", "Register", "Selection"];
     const shouldHideAll = hideAll.includes(props.currentPage);
 
@@ -25,6 +29,14 @@ const Navbar = (props: NavbarType) => {
         },
     ];
 
+    const toggleDropdown = () => {
+        setDropdownOpen((prev) => (!prev));
+    };
+
+    const userProfile = () => {
+        navigate("/userProfile");
+    }
+
     return (
     <>
         <div className="bg-Black flex flex-row items-center place-content-between border-Dark_red border-b">
@@ -36,22 +48,34 @@ const Navbar = (props: NavbarType) => {
 
             <nav>
                 {!shouldHideAll && (
-                    <ul className="flex flex-row text-White">
+                    <ul className="flex flex-row text-White items-center">
                         {links.map((item, index) => {
                             return (
-                                <li key={index} className="">
-                                    <a onClick = {() =>  
-                                        navigate(item.link)}
+                                <li key={index}>
+                                    <a className = {`cursor-pointer ${item.isActive ? "text-[24px] text-Bright_red" : "text-[24px] text-White hover:text-Bright_red transition-all duration-400"}`} 
+                                        onClick = {() => navigate(item.link)}
                                     >
                                         {item.text}
                                     </a>
                                 </li>
                             );
                         })}
+                        <div className="flex flex-col">
+                            <button className="flex flex-row items-center pl-2 cursor-pointer" onClick={toggleDropdown}>
+                                <img src={isDropdownOpen ? profilePlaceholder : profilePlaceholder2} className="size-10" alt="" />
+                                <p className={`pl-2 pr-4 ${isDropdownOpen ? "text-White hover:text-Bright_red" : "text-Bright_red"}`}>Username</p>    
+                            </button>
+                            
+                            {!isDropdownOpen && (
+                                <div className="bg-Lighter_black_2 text-center flex flex-col mt-2 justify-center">
+                                    <button className="py-1 border-Lighter_black_2 border-b-1 border-3 bg-Black hover:bg-Bright_red cursor-pointer" onClick={userProfile}>User Profile</button>
+                                    <button className="py-1 border-Lighter_black_2 border-3 bg-Black hover:bg-Bright_red cursor-pointer">Logout</button>
+                                </div>
+                            )}
+                        </div>
                     </ul>   
-                )}    
+                )}         
             </nav>
-            
         </div>
     </>
     )
