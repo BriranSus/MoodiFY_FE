@@ -7,7 +7,7 @@ function LandingPage() {
     const navigate = useNavigate();
 
     const startedNavigation = () => {
-        navigate("/selection")
+        navigate("/login")
     }
 
     return(
