@@ -3,13 +3,17 @@
 @layer base {
 	body {
 		font-family: 'Inter';
-    /* margin: 0; */
+    margin: 0;
     background-color: black;
     /* color: white; */
 	}
 
   button {
     font-family: 'Inter';
+  }
+
+  image{
+    margin: 0;
   }
 
   a {
@@ -54,10 +58,23 @@
     --breakpoint-desktop: 80rem;
 
     --animate-spin: spin 1s ease-in-out infinite;
+    --animate-fadeUp: fadeUp 1s ease-out forwards;
 
     @keyframes spin{
         0%{
             transform: rotate(-360deg);
         }
     }
+
+    @keyframes fadeUp{
+      0%{
+        opacity: 0;
+        transform: translateY(20px);
+      },
+      100%{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
 }

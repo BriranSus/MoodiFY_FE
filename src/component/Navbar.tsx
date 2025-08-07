@@ -39,7 +39,7 @@ const Navbar = (props: NavbarType) => {
 
     return (
     <>
-        <div className="bg-Black flex flex-row items-center place-content-between border-Dark_red border-b">
+        <div className="bg-Black flex flex-row items-center place-content-between border-Dark_red border-b fixed min-w-screen z-100">
             <div>
                 <h1 className="text-[42px] font-bold pl-[16px] text-Semi_bright_red">
                     MoodiFY
