@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import InputEmail from "../component/InputEmail";
-import InputPassword from "../component/InputPassword";
+import TextBox from "../component/InputBox";
 import Navbar from "../component/Navbar";
 import API_PATH from "../authentication/API_PATH";
 import axios from "axios";
@@ -12,6 +11,8 @@ function LoginPage() {
     const [noLogin, setNoLogin] = useState(false);
     const [error, setError] = useState("");
     const navigate = useNavigate();
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
 
     useEffect(() => {
         if (!token){
@@ -23,15 +24,15 @@ function LoginPage() {
 
     const handleLogin = async() => {
         setError("")
-        if (!InputEmail || !InputPassword){
+        if (!email || !password){
             setError("Please enter both email and password!");
             return;
         }
 
         try{
             const response = await axios.post(`${API_PATH}/(insert direction api)`, {
-                email: InputEmail,
-                password: InputPassword,
+                email: email,
+                password: password,
             });
 
             const token = response.data.payload.access_token;
@@ -55,9 +56,21 @@ function LoginPage() {
                         <p className="mt-8 font-bold text-Bright_red text-[28px]">Login</p>
                         <div className="mt-6 flex flex-col justify-left min-w-[454px] pl-10">
                             <p className={textStyle}>Email</p>
-                            <InputEmail/>
+                            <TextBox
+                                placeholder="Enter your Email"
+                                type="email"
+                                id="email"
+                                value ={email}
+                                onChange = {(e) => setEmail(e.target.value)}
+                            />
                             <p className={textStyle}>Password</p>
-                            <InputPassword/>
+                            <TextBox
+                                placeholder="Enter your Password"
+                                type="password"
+                                id="password"
+                                value ={password}
+                                onChange = {(e) => setPassword(e.target.value)}
+                            />
                         </div>
                     </div>
                 </div>    
