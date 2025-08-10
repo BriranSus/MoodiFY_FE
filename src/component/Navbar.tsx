@@ -7,7 +7,7 @@ import { useState } from "react";
 const Navbar = (props: NavbarType) => {
     const navigate = useNavigate();
 
-    const [isDropdownOpen, setDropdownOpen] = useState(false);
+    const [isDropdownOpen, setDropdownOpen] = useState(true);
     const hideAll = ["Landing", "Login", "Register", "Selection"];
     const shouldHideAll = hideAll.includes(props.currentPage);
 
@@ -52,7 +52,7 @@ const Navbar = (props: NavbarType) => {
                         {links.map((item, index) => {
                             return (
                                 <li key={index}>
-                                    <a className = {`cursor-pointer ${item.isActive ? "text-[24px] text-Bright_red" : "text-[24px] text-White hover:text-Bright_red transition-all duration-400"}`} 
+                                    <a className = {`cursor-pointer mx-6 ${item.isActive ? "text-[24px] text-Bright_red" : "text-[24px] text-White hover:text-Bright_red transition-all duration-400"}`} 
                                         onClick = {() => navigate(item.link)}
                                     >
                                         {item.text}

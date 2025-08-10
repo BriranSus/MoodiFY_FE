@@ -3,6 +3,7 @@ import LandingPage from './pages/LandingPage';
 import AboutUsPage from './pages/AboutUsPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import SelectionPage from './pages/SelectionPage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/aboutUs" element={<AboutUsPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/selection_1" element={<SelectionPage />} />
       </Routes>
     </BrowserRouter>
   );
