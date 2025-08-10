@@ -23,7 +23,7 @@ function LoginPage() {
         }
     })
 
-    const navRegister = () => {
+    const navRegister = async () => {
         navigate("/register")
     }
 
@@ -85,7 +85,7 @@ function LoginPage() {
                                 />
                                 <label className="text-White pl-2 font-[300]">Remember me</label>    
                             </div>
-                            <button className="cursor-pointer bg-Black text-White max-w-[370px] text-[24px] mt-12 min-h-[57px] rounded-[8px] hover:bg-Red font-semi_bold">
+                            <button onClick={handleLogin} className="cursor-pointer bg-Black text-White max-w-[370px] text-[24px] mt-12 min-h-[57px] rounded-[8px] hover:bg-Red font-semi_bold">
                                 Sign in
                             </button>
                             <div className="flex justify-center mt-2 max-w-[370px]">
