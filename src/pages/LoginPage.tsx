@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import TextBox from "../component/InputBox";
+import TextBox from "../component/TextBox";
 import Navbar from "../component/Navbar";
 import API_PATH from "../authentication/API_PATH";
 import axios from "axios";
@@ -13,6 +13,7 @@ function LoginPage() {
     const navigate = useNavigate();
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [remember, setRemember] = useState(false)
 
     useEffect(() => {
         if (!token){
@@ -21,6 +22,10 @@ function LoginPage() {
             setNoLogin(true);
         }
     })
+
+    const navRegister = () => {
+        navigate("/register")
+    }
 
     const handleLogin = async() => {
         setError("")
@@ -71,6 +76,23 @@ function LoginPage() {
                                 value ={password}
                                 onChange = {(e) => setPassword(e.target.value)}
                             />
+                            <div className="flex items-center pt-4">
+                                <input 
+                                    type="checkbox" 
+                                    checked={remember}
+                                    className="size-[24px]"
+                                    onChange={(e) => setRemember(e.target.checked)}
+                                />
+                                <label className="text-White pl-2 font-[300]">Remember me</label>    
+                            </div>
+                            <button className="cursor-pointer bg-Black text-White max-w-[370px] text-[24px] mt-12 min-h-[57px] rounded-[8px] hover:bg-Red font-semi_bold">
+                                Sign in
+                            </button>
+                            <div className="flex justify-center mt-2 max-w-[370px]">
+                                <p className="text-White font-[300]">Don't have an account?
+                                    <a className="cursor-pointer text-Bright_red font-[300] ml-1 hover:underline" onClick={navRegister}>Sign up</a>    
+                                </p>
+                            </div>    
                         </div>
                     </div>
                 </div>    
