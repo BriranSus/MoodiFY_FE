@@ -21,7 +21,6 @@ function SelectionPage() {
                     />
                 </div>
                 <div className="flex flex-row place-content-between">
-                    <PrevButton navigateTo="/selection_2"/>
                     <NextButton navigateTo="/selection_2"/>     
                 </div>
                    
