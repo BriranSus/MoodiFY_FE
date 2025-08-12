@@ -2,6 +2,10 @@ import { LanguageButton } from "../component/LanguageButton";
 import Navbar from "../component/Navbar";
 import NextButton from "../component/NextButton";
 import UK from "../assets/UK.svg";
+import Japan from "../assets/Japan.svg";
+import Indonesia from "../assets/Indonesia.svg";
+import Korean from "../assets/Korean.svg";
+import Spanish from "../assets/Spanish.svg";
 
 function SelectionPage2() {
     const languages = [
@@ -10,19 +14,19 @@ function SelectionPage2() {
             title:"English"
         },
         {
-            img:UK,
+            img:Japan,
             title:"Japanese"
         },
         {
-            img:UK,
+            img:Indonesia,
             title:"Indonesian"
         },
         {
-            img:UK,
+            img:Korean,
             title:"Korean"
         },
         {
-            img:UK,
+            img:Spanish,
             title:"Spanish"
         },
     ]
