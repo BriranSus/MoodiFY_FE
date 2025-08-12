@@ -1,6 +1,5 @@
 import Navbar from "../component/Navbar"
 import NextButton from "../component/NextButton"
-import PrevButton from "../component/PrevButton"
 
 function SelectionPage() {
     return (
@@ -20,7 +19,7 @@ function SelectionPage() {
                         className="size-120"
                     />
                 </div>
-                <div className="flex flex-row place-content-between">
+                <div>
                     <NextButton navigateTo="/selection_2"/>     
                 </div>
                    
