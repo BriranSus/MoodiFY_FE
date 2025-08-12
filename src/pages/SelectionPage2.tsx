@@ -60,7 +60,7 @@ function SelectionPage2() {
                 </div>
                 <div className="flex flex-row place-content-between">
                     <PrevButton navigateTo="/selection_1"/>
-                    <NextButton navigateTo="/selection_2"/>     
+                    <NextButton navigateTo="/selection_3"/>     
                 </div>
                 
             </div>
