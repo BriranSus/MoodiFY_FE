@@ -6,28 +6,36 @@ import Japan from "../assets/Japan.svg";
 import Indonesia from "../assets/Indonesia.svg";
 import Korean from "../assets/Korean.svg";
 import Spanish from "../assets/Spanish.svg";
+import checkMark from "../assets/checkmark.svg"
+import PrevButton from "../component/PrevButton";
 
 function SelectionPage2() {
+
     const languages = [
         {
             img:UK,
-            title:"English"
+            title:"English",
+            checkMark:checkMark
         },
         {
             img:Japan,
-            title:"Japanese"
+            title:"Japanese",
+            checkMark:checkMark
         },
         {
             img:Indonesia,
-            title:"Indonesian"
+            title:"Indonesian",
+            checkMark:checkMark
         },
         {
             img:Korean,
-            title:"Korean"
+            title:"Korean",
+            checkMark:checkMark
         },
         {
             img:Spanish,
-            title:"Spanish"
+            title:"Spanish",
+            checkMark:checkMark
         },
     ]
 
@@ -43,14 +51,15 @@ function SelectionPage2() {
                         <p className="text-Bright_red font-medium pl-2 pr-2">Languages</p>    
                         <h2 className="text-White font-[300]">do you prefer for your songs?</h2> 
                     </div>
-                    <div className="mt-16 grid grid-cols-3 gap-16 mb-16">
+                    <div className="mt-16 grid grid-cols-3 gap-16 mb-32">
                         {languages.map((item) => (
                             <LanguageButton {...item} />
                         ))}  
                     </div>
                     
                 </div>
-                <div>
+                <div className="flex flex-row place-content-between">
+                    <PrevButton navigateTo="/selection_1"/>
                     <NextButton navigateTo="/selection_2"/>     
                 </div>
                 
