@@ -27,6 +27,9 @@ function SelectionPage2() {
             title:"Indonesian",
             checkMark:checkMark
         },
+    ]
+
+    const secondRowLanguages = [
         {
             img:Korean,
             title:"Korean",
@@ -36,7 +39,7 @@ function SelectionPage2() {
             img:Spanish,
             title:"Spanish",
             checkMark:checkMark
-        },
+        }
     ]
 
     return (
@@ -51,11 +54,17 @@ function SelectionPage2() {
                         <p className="text-Bright_red font-medium pl-2 pr-2">Languages</p>    
                         <h2 className="text-White font-[300]">do you prefer for your songs?</h2> 
                     </div>
-                    <div className="mt-16 grid grid-cols-3 gap-16 mb-32">
+                    <div className="mt-16 grid grid-cols-3 gap-16 mb-16">
                         {languages.map((item) => (
                             <LanguageButton {...item} />
-                        ))}  
+                        ))}   
                     </div>
+                    <div className="grid grid-cols-2 gap-16 mb-32">
+                        {secondRowLanguages.map((item) => (
+                            <LanguageButton {...item} />
+                        ))}
+                    </div>
+                         
                     
                 </div>
                 <div className="flex flex-row place-content-between">
