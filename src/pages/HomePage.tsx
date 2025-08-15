@@ -4,6 +4,9 @@ function HomePage () {
     return (
         <>
             <Navbar currentPage={"Home"}/>
+            <div>
+                
+            </div>
         </>
     )
 }
