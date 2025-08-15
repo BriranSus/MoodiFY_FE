@@ -1,56 +1,32 @@
+import { useState } from "react"
 import CheckButton from "../component/CheckButton"
 import Navbar from "../component/Navbar"
 import NextButton from "../component/NextButton"
 import PrevButton from "../component/PrevButton"
 
 function SelectionPage3() {
+    const [selected, setSelected] = useState(false)
     const genres = [
-        {
-            title:"Pop"
-        },
-        {
-            title:"Hip-Hop"
-        },
-        {
-            title:"EDM"
-        },
-        {
-            title:"Rock"
-        },
-        {
-            title:"RNB"
-        },
-        {
-            title:"Latin"
-        },
-        {
-            title:"Jazz"
-        },
-        {
-            title:"Folk"
-        },
-        {
-            title:"Reggae"
-        },
-        {
-            title:"Blue"
-        },
-        {
-            title:"Indie"
-        },
-        {
-            title:"Lo-Fi"
-        },
-        {
-            title:"Country"
-        },
-        {
-            title:"Classical"
-        },
-        {
-            title:"Metal"
-        }
+        "Pop",
+        "Hip-Hop",
+        "EDM",
+        "Rock",
+        "RNB",
+        "Latin",
+        "Jazz",
+        "Folk",
+        "Reggae",
+        "Blue",
+        "Indie",
+        "Lo-Fi",
+        "Country",
+        "Classical",
+        "Metal"
     ]
+
+    const handleClick = () => {
+        setSelected(!selected)
+    }
 
     return(
         <>
@@ -63,15 +39,16 @@ function SelectionPage3() {
                         <h2 className="text-White font-[300]">What's your favourite</h2> 
                         <p className="text-Bright_red font-medium pl-2 pr-2">Genre?</p>    
                     </div>
-                    {genres.map((item) => (
-                        <CheckButton {...item}/>
-                    ))}
-                         
+                    <div className="grid grid-cols-5 gap-12 mt-16 mb-32">
+                        {genres.map((item) => (
+                            <CheckButton onClick={handleClick} selected title={item}/>
+                        ))}    
+                    </div>
                     
                 </div>
                 <div className="flex flex-row place-content-between">
-                    <PrevButton navigateTo="/selection_1"/>
-                    <NextButton navigateTo="/selection_3"/>     
+                    <PrevButton navigateTo="/selection_2"/>
+                    <NextButton navigateTo="/selection_4"/>     
                 </div>
             </div>
         </>
