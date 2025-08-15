@@ -1,8 +1,7 @@
-import { useState } from "react"
-import CheckButton from "../component/CheckButton"
-import Navbar from "../component/Navbar"
-import NextButton from "../component/NextButton"
-import PrevButton from "../component/PrevButton"
+import CheckButton from "../../component/CheckButton"
+import Navbar from "../../component/Navbar"
+import NextButton from "../../component/NextButton"
+import PrevButton from "../../component/PrevButton"
 
 function SelectionPage3() {
     const genres = [
@@ -42,7 +41,7 @@ function SelectionPage3() {
                 </div>
                 <div className="flex flex-row place-content-between">
                     <PrevButton navigateTo="/selection_2"/>
-                    <NextButton navigateTo="/selection_4"/>     
+                    <NextButton title="Next ->" navigateTo="/selection_4"/>     
                 </div>
             </div>
         </>

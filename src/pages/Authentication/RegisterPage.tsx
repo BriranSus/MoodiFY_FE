@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
-import Navbar from "../component/Navbar"
+import Navbar from "../../component/Navbar"
 import { useState } from "react";
-import TextBox from "../component/TextBox";
+import TextBox from "../../component/TextBox";
 
 function RegisterPage() {
 

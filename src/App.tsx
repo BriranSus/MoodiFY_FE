@@ -1,12 +1,13 @@
 import { BrowserRouter, Route, Routes } from 'react-router'
 import LandingPage from './pages/LandingPage';
 import AboutUsPage from './pages/AboutUsPage';
-import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage';
-import SelectionPage from './pages/SelectionPage';
-import SelectionPage2 from './pages/SelectionPage2';
-import SelectionPage3 from './pages/SelectionPage3';
-import SelectionPage4 from './pages/SelectionPage4';
+import LoginPage from './pages/Authentication/LoginPage';
+import RegisterPage from './pages/Authentication/RegisterPage';
+import SelectionPage from './pages/Selection/SelectionPage';
+import SelectionPage2 from './pages/Selection/SelectionPage2';
+import SelectionPage3 from './pages/Selection/SelectionPage3';
+import SelectionPage4 from './pages/Selection/SelectionPage4';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/selection_2" element={<SelectionPage2 />} />
         <Route path="/selection_3" element={<SelectionPage3 />} />
         <Route path="/selection_4" element={<SelectionPage4 />} />
+        <Route path="/home" element={<HomePage />} />
       </Routes>
     </BrowserRouter>
   );

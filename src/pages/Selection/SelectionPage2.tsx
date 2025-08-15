@@ -1,13 +1,13 @@
-import { LanguageButton } from "../component/LanguageButton";
-import Navbar from "../component/Navbar";
-import NextButton from "../component/NextButton";
-import UK from "../assets/UK.svg";
-import Japan from "../assets/Japan.svg";
-import Indonesia from "../assets/Indonesia.svg";
-import Korean from "../assets/Korean.svg";
-import Spanish from "../assets/Spanish.svg";
-import checkMark from "../assets/checkmark.svg"
-import PrevButton from "../component/PrevButton";
+import { LanguageButton } from "../../component/LanguageButton";
+import Navbar from "../../component/Navbar";
+import NextButton from "../../component/NextButton";
+import UK from "../../assets/UK.svg";
+import Japan from "../../assets/Japan.svg";
+import Indonesia from "../../assets/Indonesia.svg";
+import Korean from "../../assets/Korean.svg";
+import Spanish from "../../assets/Spanish.svg";
+import checkMark from "../../assets/checkmark.svg"
+import PrevButton from "../../component/PrevButton";
 
 function SelectionPage2() {
 
@@ -68,7 +68,7 @@ function SelectionPage2() {
                 </div>
                 <div className="flex flex-row place-content-between">
                     <PrevButton navigateTo="/selection_1"/>
-                    <NextButton navigateTo="/selection_3"/>     
+                    <NextButton title="Next ->" navigateTo="/selection_3"/>     
                 </div>
                 
             </div>
