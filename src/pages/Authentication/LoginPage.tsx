@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import TextBox from "../component/TextBox";
-import Navbar from "../component/Navbar";
-import API_PATH from "../authentication/API_PATH";
+import TextBox from "../../component/TextBox";
+import Navbar from "../../component/Navbar";
+import API_PATH from "../../authentication/API_PATH";
 import axios from "axios";
 import { useNavigate } from "react-router";
 

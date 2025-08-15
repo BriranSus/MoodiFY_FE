@@ -1,5 +1,5 @@
-import Navbar from "../component/Navbar"
-import NextButton from "../component/NextButton"
+import Navbar from "../../component/Navbar"
+import NextButton from "../../component/NextButton"
 
 function SelectionPage() {
     return (
@@ -20,7 +20,7 @@ function SelectionPage() {
                     />
                 </div>
                 <div>
-                    <NextButton navigateTo="/selection_2"/>     
+                    <NextButton title="Next ->" navigateTo="/selection_2"/>     
                 </div>
                    
             </div>
