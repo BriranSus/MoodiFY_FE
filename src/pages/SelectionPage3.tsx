@@ -5,7 +5,6 @@ import NextButton from "../component/NextButton"
 import PrevButton from "../component/PrevButton"
 
 function SelectionPage3() {
-    const [selected, setSelected] = useState(false)
     const genres = [
         "Pop",
         "Hip-Hop",
@@ -24,10 +23,6 @@ function SelectionPage3() {
         "Metal"
     ]
 
-    const handleClick = () => {
-        setSelected(!selected)
-    }
-
     return(
         <>
             <Navbar currentPage={"Selection"}/>
@@ -41,7 +36,7 @@ function SelectionPage3() {
                     </div>
                     <div className="grid grid-cols-5 gap-12 mt-16 mb-32">
                         {genres.map((item) => (
-                            <CheckButton onClick={handleClick} selected title={item}/>
+                            <CheckButton title={item}/>
                         ))}    
                     </div>
                     

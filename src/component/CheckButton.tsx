@@ -1,15 +1,20 @@
+import { useState } from "react";
 import checkMark from "../assets/checkmark.svg"
 
 interface propsType {
     title: string,
-    onClick: any,
-    selected: boolean
 }
 
-function CheckButton ({title, selected, ...props}: propsType) {
+function CheckButton ({title}: propsType) {
+    const [selected, setSelected] = useState(false)
+
+    const handleClick = () => {
+        setSelected(!selected)
+    }
+    
     return (
         <>
-            <div {...props} className="flex flex-row items-center gap-3 ">
+            <div onClick={handleClick} className="flex flex-row items-center gap-3 ">
                 <div className="min-w-[52px] min-h-[52px] bg-Angry rounded-[10px]">
                     {selected && (
                         <img src={checkMark} className="size-[48px]" alt="" />
