@@ -66,17 +66,21 @@ const Navbar = (props: NavbarType) => {
                                 <p className={`pl-2 pr-4 ${isDropdownOpen ? "text-White hover:text-Bright_red" : "text-Bright_red"}`}>Username</p>    
                             </button>
                             
-                            {!isDropdownOpen && (
-                                <div className="bg-Lighter_black_2 text-center flex flex-col mt-2 justify-center">
-                                    <button className="py-1 border-Lighter_black_2 border-b-1 border-3 bg-Black hover:bg-Bright_red cursor-pointer" onClick={userProfile}>User Profile</button>
-                                    <button className="py-1 border-Lighter_black_2 border-3 bg-Black hover:bg-Bright_red cursor-pointer">Logout</button>
-                                </div>
-                            )}
+                            
                         </div>
                     </ul>   
                 )}         
             </nav>
         </div>
+        <div className="pt-14 text-White z-2 fixed flex justify-end min-w-screen">
+            {!isDropdownOpen && (
+                <div className="bg-Lighter_black_2 text-center flex flex-col mt-2 justify-center">
+                    <button className="py-1 border-Lighter_black_2 border-b-1 border-3 bg-Black hover:bg-Bright_red cursor-pointer px-6" onClick={userProfile}>User Profile</button>
+                    <button className="py-1 border-Lighter_black_2 border-3 bg-Black hover:bg-Bright_red cursor-pointer">Logout</button>
+                </div>
+            )}    
+        </div>
+        
     </>
     )
 }
