@@ -4,7 +4,7 @@
 	body {
 		font-family: 'Inter';
     margin: 0;
-    background-color: black;
+    background-color: #0C0C0C;
     /* color: white; */
 	}
 
@@ -47,6 +47,9 @@
     --color-Happy: #029354;
     --color-Angry: #621D0D;
     --color-Grey_white: #D9D9D9;
+    --color-Angry_up: #A42406;
+    --color-Sad_up: #160B7B;
+    --color-Happy_up: #047242;
 
     --breakpoint-*: initial;
     --breakpoint-phone: 20rem;

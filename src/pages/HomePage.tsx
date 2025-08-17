@@ -21,6 +21,7 @@ function HomePage () {
             </div>
             <div className="pt-16 z-3">
                 <Mood selectedMood={selectedMood} ></Mood>
+                
             </div>
         </>
     )
