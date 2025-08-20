@@ -6,6 +6,5 @@ List of Techstack for the Frontend:
 - React.JS
 - Typescript
 - TailwindCSS
-- Github
 
 
