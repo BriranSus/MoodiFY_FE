@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# MoodiFY
 
 **The frontend side for the AI powered music playing platform project, MoodiFY.** 
 
