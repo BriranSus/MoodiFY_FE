@@ -1,3 +1,11 @@
 # React + TypeScript + Vite
 
-The frontend side for the music playing platform project, MoodiFY. The frontend uses the Vite build tool for React.JS + Typescript alongside TailwindCSS
+The frontend side for the AI powered music playing platform project, MoodiFY. 
+
+List of Techstack for the Frontend:
+- React.JS
+- Typescript
+- TailwindCSS
+- Github
+
+
